@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc";
+option java_outer_classname = "JobListingServiceProto";
+import "google/protobuf/timestamp.proto";
+
+package joblistingservice;
+
+
+
+
+enum JobStatus {
+  SUBMITTED = 0;
+  RUNNING = 1;
+  COMPLETED = 2;
+}
+
+message Job {
+  string jobId = 1;
+  string jobName = 2;
+  JobStatus jobStatus = 3;
+  google.protobuf.Timestamp createdAt = 4;
+}
+
+// Request for ListAllJobs
+message ListAllJobsRequest {}
+
+// Response for ListAllJobs
+message ListAllJobsResponse {
+  repeated Job jobs = 1;
+}
+
+// Request for GetJobDetails
+message GetJobDetailsRequest {
+  string jobId = 1;
+}
+
+// Response for GetJobDetails
+message GetJobDetailsResponse {
+  Job job = 1;
+}
+
+service JobListingService {
+  rpc ListAllJobs(ListAllJobsRequest) returns (ListAllJobsResponse);
+  rpc GetJobDetails(GetJobDetailsRequest) returns (GetJobDetailsResponse);
+}
+
+message YourRequest {
+  string name = 1;
+}
+
+message YourResponse {
+  string message = 1;
+}
