@@ -9,9 +9,9 @@ package com.example.grpc;
 public enum JobStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>SUBMITTED = 0;</code>
+   * <code>DEFAULT = 0;</code>
    */
-  SUBMITTED(0),
+  DEFAULT(0),
   /**
    * <code>RUNNING = 1;</code>
    */
@@ -20,13 +20,17 @@ public enum JobStatus
    * <code>COMPLETED = 2;</code>
    */
   COMPLETED(2),
+  /**
+   * <code>SUBMITTED = 3;</code>
+   */
+  SUBMITTED(3),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>SUBMITTED = 0;</code>
+   * <code>DEFAULT = 0;</code>
    */
-  public static final int SUBMITTED_VALUE = 0;
+  public static final int DEFAULT_VALUE = 0;
   /**
    * <code>RUNNING = 1;</code>
    */
@@ -35,6 +39,10 @@ public enum JobStatus
    * <code>COMPLETED = 2;</code>
    */
   public static final int COMPLETED_VALUE = 2;
+  /**
+   * <code>SUBMITTED = 3;</code>
+   */
+  public static final int SUBMITTED_VALUE = 3;
 
 
   public final int getNumber() {
@@ -61,9 +69,10 @@ public enum JobStatus
    */
   public static JobStatus forNumber(int value) {
     switch (value) {
-      case 0: return SUBMITTED;
+      case 0: return DEFAULT;
       case 1: return RUNNING;
       case 2: return COMPLETED;
+      case 3: return SUBMITTED;
       default: return null;
     }
   }

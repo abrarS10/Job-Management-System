@@ -11,9 +11,10 @@ package joblistingservice;
 
 
 enum JobStatus {
-  SUBMITTED = 0;
+  DEFAULT = 0;
   RUNNING = 1;
   COMPLETED = 2;
+  SUBMITTED = 3;
 }
 
 message Job {

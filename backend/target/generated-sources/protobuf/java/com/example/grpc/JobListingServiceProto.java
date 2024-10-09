@@ -69,15 +69,15 @@ public final class JobListingServiceProto {
       "st\022\r\n\005jobId\030\001 \001(\t\"<\n\025GetJobDetailsRespon" +
       "se\022#\n\003job\030\001 \001(\0132\026.joblistingservice.Job\"" +
       "\033\n\013YourRequest\022\014\n\004name\030\001 \001(\t\"\037\n\014YourResp" +
-      "onse\022\017\n\007message\030\001 \001(\t*6\n\tJobStatus\022\r\n\tSU" +
-      "BMITTED\020\000\022\013\n\007RUNNING\020\001\022\r\n\tCOMPLETED\020\0022\325\001" +
-      "\n\021JobListingService\022\\\n\013ListAllJobs\022%.job" +
-      "listingservice.ListAllJobsRequest\032&.jobl" +
-      "istingservice.ListAllJobsResponse\022b\n\rGet" +
-      "JobDetails\022\'.joblistingservice.GetJobDet" +
-      "ailsRequest\032(.joblistingservice.GetJobDe" +
-      "tailsResponseB,\n\020com.example.grpcB\026JobLi" +
-      "stingServiceProtoP\001b\006proto3"
+      "onse\022\017\n\007message\030\001 \001(\t*C\n\tJobStatus\022\013\n\007DE" +
+      "FAULT\020\000\022\013\n\007RUNNING\020\001\022\r\n\tCOMPLETED\020\002\022\r\n\tS" +
+      "UBMITTED\020\0032\325\001\n\021JobListingService\022\\\n\013List" +
+      "AllJobs\022%.joblistingservice.ListAllJobsR" +
+      "equest\032&.joblistingservice.ListAllJobsRe" +
+      "sponse\022b\n\rGetJobDetails\022\'.joblistingserv" +
+      "ice.GetJobDetailsRequest\032(.joblistingser" +
+      "vice.GetJobDetailsResponseB,\n\020com.exampl" +
+      "e.grpcB\026JobListingServiceProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

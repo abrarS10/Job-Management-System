@@ -54,6 +54,11 @@ public class HttpGatewayServer {
                 ListAllJobsRequest request = ListAllJobsRequest.newBuilder().build();
                 ListAllJobsResponse response = stub.listAllJobs(request);
 
+                exchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
+                exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+                exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Content-Type");
+
+
                 String jsonResponse = response.toString();  // Convert the response to JSON if needed
                 exchange.getResponseHeaders().set("Content-Type", "application/json");
                 exchange.sendResponseHeaders(200, jsonResponse.getBytes().length);
@@ -82,6 +87,11 @@ public class HttpGatewayServer {
 
                 GetJobDetailsRequest request = GetJobDetailsRequest.newBuilder().setJobId(jobId).build();
                 GetJobDetailsResponse response = stub.getJobDetails(request);
+
+
+                exchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
+                exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+                exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Content-Type");
 
                 String jsonResponse = response.toString();  // Convert the response to JSON if needed
                 exchange.getResponseHeaders().set("Content-Type", "application/json");

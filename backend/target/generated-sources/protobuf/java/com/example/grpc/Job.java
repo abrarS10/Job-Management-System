@@ -257,7 +257,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jobName_);
     }
-    if (jobStatus_ != com.example.grpc.JobStatus.SUBMITTED.getNumber()) {
+    if (jobStatus_ != com.example.grpc.JobStatus.DEFAULT.getNumber()) {
       output.writeEnum(3, jobStatus_);
     }
     if (createdAt_ != null) {
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jobName_);
     }
-    if (jobStatus_ != com.example.grpc.JobStatus.SUBMITTED.getNumber()) {
+    if (jobStatus_ != com.example.grpc.JobStatus.DEFAULT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, jobStatus_);
     }

@@ -15,22 +15,36 @@ public class JobListingServiceImpl extends JobListingServiceGrpc.JobListingServi
     public JobListingServiceImpl() {
         jobList.add(Job.newBuilder()
                 .setJobId("1")
-                .setJobName("Job 1")
-                .setJobStatus(JobStatus.SUBMITTED)
+                .setJobName("Software Developer")
+                .setJobStatus(JobStatus.RUNNING)
                 .setCreatedAt(Timestamp.newBuilder().setSeconds(Instant.now().getEpochSecond()).build())
                 .build());
 
         jobList.add(Job.newBuilder()
                 .setJobId("2")
-                .setJobName("Job 2")
+                .setJobName("Cashier")
                 .setJobStatus(JobStatus.RUNNING)
                 .setCreatedAt(Timestamp.newBuilder().setSeconds(Instant.now().getEpochSecond()).build())
                 .build());
 
         jobList.add(Job.newBuilder()
                 .setJobId("3")
-                .setJobName("Job 3")
+                .setJobName("Front Desk Assistant")
                 .setJobStatus(JobStatus.COMPLETED)
+                .setCreatedAt(Timestamp.newBuilder().setSeconds(Instant.now().getEpochSecond()).build())
+                .build());
+
+        jobList.add(Job.newBuilder()
+                .setJobId("4")
+                .setJobName("Project Manager")
+                .setJobStatus(JobStatus.COMPLETED)
+                .setCreatedAt(Timestamp.newBuilder().setSeconds(Instant.now().getEpochSecond()).build())
+                .build());
+
+        jobList.add(Job.newBuilder()
+                .setJobId("5")
+                .setJobName("UI/UX Designer")
+                .setJobStatus(JobStatus.SUBMITTED)
                 .setCreatedAt(Timestamp.newBuilder().setSeconds(Instant.now().getEpochSecond()).build())
                 .build());
     }
